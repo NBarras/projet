@@ -2,3 +2,10 @@ language:
 - ruby
 rvm:
 - 2.1.3
+deploy:
+  provider: heroku
+  api_key:
+    secure: S9xEUA8aP+1JzzbYYginBRoGTNAXJfvdcrdyzGnxQBZiTRUQGegnE06DGS+JT42vNR1vyf04x+j86fnNqTHMqBTSpqYdAEZtcx82HKLDk5vTFl366qkEzK89Qv0m8xNoEm6AeTEYTulBtw4QUDmwKK2Of2ptfgNUueGKxqFVeN2bgXKZb/+lRenGyppU/26QNRn8Wk8pwhlomoizqaBLNN+WK9R2jBtVhhCsmFUrjfARZ7Oifuy3oJDGiiwMZcfQVYVKoFHxZFXAyr8jCs9BAFueXtO5dlN3Zjfz1en6sL9kvMWX/miP3DTM9qnoKLIwMxeYiaFa+5B/r+XoFQshQ7C7EE1KS9FQwoRLeQYoLlIRXK50u+B6A1BUiltOIeB5OqF2+UHUmx5T3ku1ht5fujpKCNIcm2DtR/HNKMbpgPoTezZAfFzwyi86UGu0LPcprQes/SurjBxXbBtFzJ/1rGDHmOL1ypZaeV3Y3fB8b/0BlVTqhTT/fYdJDrKwxJlEEEXpmSRvlJ9LAYDsDoP5eiCG5XYlW6cAunrTboMo65rwcGpfYTu9p9dvSpNlX2rxQKtbpE6q/qHrqHJXa9vQNZvTlCBrHxCic7Ue3YmNA4XNewbxTVvzv0glyAl6BBnEuIYmxONzoVQ5koB2FogEVlUCumUG54SXoFluIUM9JoE=
+  app: projet
+  on:
+    repo: NBarras/projet
