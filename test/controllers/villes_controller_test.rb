@@ -16,10 +16,10 @@ class VillesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create ville" do
-    assert_difference('Ville.count') do
-      post :create, ville: { latitude: @ville.latitude, longitude: @ville.longitude, nom: @ville.nom }
-    end
+#  test "should create ville" do
+#    assert_difference('Ville.count') do
+#      post :create, ville: { latitude: @ville.latitude, longitude: @ville.longitude, nom: @ville.nom }
+#    end
 
     assert_redirected_to ville_path(assigns(:ville))
   end
