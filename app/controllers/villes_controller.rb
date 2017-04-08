@@ -9,31 +9,9 @@ class VillesController < ApplicationController
 
   # GET /villes/1
   # GET /villes/1.json
-  def show 
-    forecast = ForecastIO.forecast(@ville.latitude, @ville.longitude)
-    weatherOk = false
-    temperatureOk = false
-    if forecast
-      todayForecast = forecast.currently
-      if todayForecast
-        if todayForecast.summary
-           @weather = todayForecast.summary
-           weatherOk = true
-         end
-         if todayForecast.temperature
-           @temperature = toCelsus(todayForecast.temperature)
-           temperatureOk = true
-        end
-      end
-    end
-    if !weatherOk
-      @weather = "Unavailable"
-    end
-    if !temperatureOk
-      @temperature = "Unavailable"
-    end
-  end
-
+  def show
+    @meteo = @ville.meteo
+  end  
   # GET /villes/new
   def new
     @ville = Ville.new
@@ -81,15 +59,6 @@ class VillesController < ApplicationController
       format.html { redirect_to villes_url, notice: 'Ville was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-  
-  #faren to cels
-  def toCelsus(fahrenheitTemperature)
-   if fahrenheitTemperature
-    return (fahrenheitTemperature - 32.0) * 5.0 / 9.0
-  else
-   return nil
-   end
   end
 
   private
