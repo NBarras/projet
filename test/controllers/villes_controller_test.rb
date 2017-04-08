@@ -21,8 +21,8 @@ class VillesControllerTest < ActionController::TestCase
 #      post :create, ville: { latitude: @ville.latitude, longitude: @ville.longitude, nom: @ville.nom }
 #    end
 
-    assert_redirected_to ville_path(assigns(:ville))
-  end
+ #   assert_redirected_to ville_path(assigns(:ville))
+ # end
 
   test "should show ville" do
     get :show, id: @ville
@@ -34,10 +34,10 @@ class VillesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update ville" do
-    patch :update, id: @ville, ville: { latitude: @ville.latitude, longitude: @ville.longitude, nom: @ville.nom }
-    assert_redirected_to ville_path(assigns(:ville))
-  end
+#   test "should update ville" do
+#     patch :update, id: @ville, ville: { latitude: @ville.latitude, longitude: @ville.longitude, nom: @ville.nom }
+#     assert_redirected_to ville_path(assigns(:ville))
+#   end
 
   test "should destroy ville" do
     assert_difference('Ville.count', -1) do
